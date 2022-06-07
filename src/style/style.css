@@ -25,7 +25,9 @@
     border: 2px solid black;
     border-radius: 5px;
     display: flex;
-    justify-content: space-around;
-    width: 75px;
+    justify-content: space-between;
+    width: 800px;
+    padding-left: 30px;
+    padding-right: 30px;
     margin-bottom: 5px;
 }

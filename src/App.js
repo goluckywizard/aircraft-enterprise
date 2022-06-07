@@ -6,6 +6,10 @@ import Manufactures from "./pages/Manufactures";
 import TestFields from "./pages/TestFields";
 import Departments from "./pages/Departments";
 import EmployeeCategories from "./pages/EmployeeCategories";
+import Engineers from "./pages/Engineers";
+import Brigades from "./pages/Brigades";
+import Worker from "./components/Worker";
+import Workers from "./pages/Workers";
 
 function App() {
   return (
@@ -17,6 +21,9 @@ function App() {
               <Route exact path="/testfield" element={<TestFields/>}/>
               <Route exact path="/department" element={<Departments/>}/>
               <Route exact path="/empl-category" element={<EmployeeCategories/>}/>
+              <Route exact path="/engineer" element={<Engineers/>}/>
+              <Route exact path="/brigade" element={<Brigades/>}/>
+              <Route exact path="/worker" element={<Workers/>}/>
           </Routes>
       </Router>
     </div>

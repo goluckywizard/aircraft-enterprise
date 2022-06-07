@@ -1,6 +1,8 @@
 import React from 'react';
 import '../style/style.css';
-const EmplCategory = (props) => {
+
+const Brigade = (props) => {
+    console.log(props)
     return (
         <div className="container">
             <p>{props.props.id}</p>
@@ -9,4 +11,4 @@ const EmplCategory = (props) => {
     );
 };
 
-export default EmplCategory;
+export default Brigade;

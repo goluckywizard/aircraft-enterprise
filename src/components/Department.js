@@ -1,9 +1,12 @@
 import React from 'react';
+import '../style/style.css';
 
-const Department = () => {
+const Department = (props) => {
     return (
-        <div>
-
+        <div className="container">
+            <p>{props.props.id}</p>
+            <p>{props.props.name}</p>
+            <p>Мануфактура: {props.props.manufactureName}</p>
         </div>
     );
 };

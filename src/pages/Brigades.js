@@ -2,23 +2,23 @@ import React, {useEffect, useState} from 'react';
 import '../style/style.css';
 import Header from "../components/Header";
 import Manufacture from "../components/Manufacture";
-import EmplCategory from "../components/EmplCategory";
+import Brigade from "../components/Brigade";
 
-const EmployeeCategories = () => {
+const Brigades = () => {
     const [name, setName] = useState('')
-    const [categories, setCategories] = useState([])
-    async function getCategories() {
-        const response = await fetch('http://localhost:8080/employee-category', {
+    const [brigades, setBrigades] = useState([])
+    async function getBrigades() {
+        const response = await fetch('http://localhost:8080/brigade', {
             headers: {
                 'Content-Type': 'application/json',
             }
         })
         let data = await response.json()
-        setCategories(data)
+        setBrigades(data)
         console.log(data)
     }
-    async function addCategory(event) {
-        const response = await fetch('http://localhost:8080/employee-category', {
+    async function addBrigade(event) {
+        const response = await fetch('http://localhost:8080/brigade', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -28,22 +28,21 @@ const EmployeeCategories = () => {
         console.log(response.data)
     }
     useEffect(() => {
-        getCategories()
-        console.log(categories)
+        getBrigades()
+        console.log(brigades)
     }, [])
-
     return (
-        <div>
+        <div className="main">
             <Header/>
-            <form onSubmit={addCategory}>
-                <p>Добавить категорию: </p>
+            <form onSubmit={addBrigade}>
+                <p>Добавить бригаду: </p>
                 <input type="text" size="15" onChange={(e) => setName(e.target.value)}/>
+                <button type="submit">Submit</button>
             </form>
-            <div className="main">
-                {categories?.map((props) => <EmplCategory props={props}/>)}
-            </div>
+            {brigades?.map((props) => <Brigade props={props}/>)}
+
         </div>
     );
 };
 
-export default EmployeeCategories;
+export default Brigades;

@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import '../style/style.css';
 import Header from "../components/Header";
 import TestField from "../components/TestField";
+import Department from "../components/Department";
 
 const Departments = () => {
     const [name, setName] = useState('')
@@ -60,9 +61,7 @@ const Departments = () => {
                     </select>
                 </form>
                 <div className="main">
-                    {departments?.map((props) => <div>
-                        <TestField props={props}/>
-                    </div>)}
+                    {departments?.map((props) => <Department props={props}/>)}
                 </div>
             </div>
         </div>

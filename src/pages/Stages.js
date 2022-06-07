@@ -31,18 +31,15 @@ const Stages = () => {
         console.log(stages)
     }, [])
     return (
-        <div className="main">
-            <Header/>
-            <form onSubmit={addStage} className='form'>
-                <p>Добавить стадию: </p>
-                <input type="text" size="15" onChange={(e) => setName(e.target.value)}/>
-            </form>
-            <div className="stages">
-                {stages?.map((stage) => <div>
-                    <Stage stage={stage}/>
-                </div>)}
+        <div>
+            <div className="main">
+                <Header/>
+                <form onSubmit={addStage} className='form'>
+                    <p>Добавить стадию: </p>
+                    <input type="text" size="15" onChange={(e) => setName(e.target.value)}/>
+                </form>
             </div>
-
+            {stages?.map((stage) => <Stage stage={stage}/>)}
         </div>
     );
 };

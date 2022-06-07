@@ -31,18 +31,15 @@ const Manufactures = () => {
         console.log(manufactures)
     }, [])
     return (
-        <div className="main">
+        <div>
             <Header/>
-            <form onSubmit={addManufacture}>
-                <p>Добавить мануфактуру: </p>
-                <input type="text" size="15" onChange={(e) => setName(e.target.value)}/>
-            </form>
             <div className="main">
-                {manufactures?.map((props) => <div>
-                    <Manufacture props={props}/>
-                </div>)}
+                <form onSubmit={addManufacture}>
+                    <p>Добавить мануфактуру: </p>
+                    <input type="text" size="15" onChange={(e) => setName(e.target.value)}/>
+                </form>
+                {manufactures?.map((props) => <Manufacture props={props}/>)}
             </div>
-
         </div>
     );
 };

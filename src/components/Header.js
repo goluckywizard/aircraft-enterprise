@@ -4,7 +4,7 @@ import '../style/header.css';
 
 const Header = () => {
     return (
-        <header className="container">
+        <header className="headerContainer">
             <Link to="/manufacture">
                 <p>Цеха</p>
             </Link>
@@ -20,6 +20,16 @@ const Header = () => {
             <Link to="/empl-category">
                 <p>Категории персонала</p>
             </Link>
+            <Link to="/engineer">
+                <p>Инженерно-технический персонал</p>
+            </Link>
+            <Link to="/brigade">
+                <p>Бригады</p>
+            </Link>
+            <Link to="/worker">
+                <p>Рабочие</p>
+            </Link>
+
         </header>
     );
 };
