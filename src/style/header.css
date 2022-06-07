@@ -1,9 +1,14 @@
 .headerContainer {
     display: flex;
-    height: 50px;
+    flex-wrap: wrap;
+
     width: 98%;
     border: 2px solid black;
     padding-right: 10px;
     padding-left: 10px;
     justify-content: space-between
+}
+.headerElement {
+    padding: 5px;
+    font-family: "Underdog";
 }

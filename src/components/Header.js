@@ -6,34 +6,44 @@ const Header = () => {
     return (
         <header className="headerContainer">
             <Link to="/manufacture">
-                <p>Цеха</p>
+                <p className="headerElement">Цеха</p>
             </Link>
             <Link to="/department">
-                <p>Участки</p>
+                <p className="headerElement">Участки</p>
             </Link>
             <Link to="/testfield">
-                <p>Полигоны</p>
+                <p className="headerElement">Полигоны</p>
             </Link>
             <Link to="/stages">
-                <p>Стадии тестов</p>
+                <p className="headerElement">Стадии тестов</p>
             </Link>
             <Link to="/empl-category">
-                <p>Категории персонала</p>
+                <p className="headerElement">Категории персонала</p>
             </Link>
+            <Link to="/empl-attribute">
+                <p className="headerElement">Атрибуты персонала</p>
+            </Link>
+
             <Link to="/engineer">
-                <p>Инженерно-технический персонал</p>
+                <p className="headerElement">Инженерно-технический персонал</p>
             </Link>
             <Link to="/brigade">
-                <p>Бригады</p>
+                <p className="headerElement">Бригады</p>
             </Link>
             <Link to="/worker">
-                <p>Рабочие</p>
+                <p className="headerElement">Рабочие</p>
             </Link>
             <Link to="/test-equipment">
-                <p>Оборудование</p>
+                <p className="headerElement">Оборудование</p>
             </Link>
             <Link to="/product-category">
-                <p>Категории продуктов</p>
+                <p className="headerElement">Категории продуктов</p>
+            </Link>
+            <Link to="/product-attribute">
+                <p className="headerElement">Атрибуты продуктов</p>
+            </Link>
+            <Link to="/product-type">
+                <p className="headerElement">Типы продуктов</p>
             </Link>
 
         </header>

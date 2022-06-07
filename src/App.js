@@ -13,6 +13,8 @@ import Workers from "./pages/Workers";
 import TestEquipments from "./pages/TestEquipments";
 import EmployeeAttributes from "./pages/EmployeeAttributes";
 import ProductCategories from "./pages/ProductCategories";
+import ProductTypes from "./pages/ProductTypes";
+import ProductAttributes from "./pages/ProductAttributes";
 
 function App() {
   return (
@@ -24,12 +26,15 @@ function App() {
               <Route exact path="/testfield" element={<TestFields/>}/>
               <Route exact path="/department" element={<Departments/>}/>
               <Route exact path="/empl-category" element={<EmployeeCategories/>}/>
+              <Route exact path="/empl-attribute" element={<EmployeeAttributes/>}/>
               <Route exact path="/engineer" element={<Engineers/>}/>
               <Route exact path="/brigade" element={<Brigades/>}/>
               <Route exact path="/worker" element={<Workers/>}/>
               <Route exact path="/test-equipment" element={<TestEquipments/>}/>
               <Route exact path="/empl-attribute" element={<EmployeeAttributes/>}/>
               <Route exact path="/product-category" element={<ProductCategories/>}/>
+              <Route exact path="/product-attribute" element={<ProductAttributes/>}/>
+              <Route exact path="/product-type" element={<ProductTypes/>}/>
           </Routes>
       </Router>
     </div>
