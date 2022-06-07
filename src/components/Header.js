@@ -29,6 +29,9 @@ const Header = () => {
             <Link to="/worker">
                 <p>Рабочие</p>
             </Link>
+            <Link to="/test-equipment">
+                <p>Оборудование</p>
+            </Link>
 
         </header>
     );

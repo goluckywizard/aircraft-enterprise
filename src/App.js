@@ -10,6 +10,7 @@ import Engineers from "./pages/Engineers";
 import Brigades from "./pages/Brigades";
 import Worker from "./components/Worker";
 import Workers from "./pages/Workers";
+import TestEquipments from "./pages/TestEquipments";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
               <Route exact path="/engineer" element={<Engineers/>}/>
               <Route exact path="/brigade" element={<Brigades/>}/>
               <Route exact path="/worker" element={<Workers/>}/>
+              <Route exact path="/test-equipment" element={<TestEquipments/>}/>
           </Routes>
       </Router>
     </div>
