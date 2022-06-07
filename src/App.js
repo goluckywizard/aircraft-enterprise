@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import React, {useEffect, useState} from 'react';
+import {BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom';
 import './App.css';
+import Stages from "./pages/Stages";
+import Manufactures from "./pages/Manufactures";
+import TestFields from "./pages/TestFields";
+import Departments from "./pages/Departments";
+import EmployeeCategories from "./pages/EmployeeCategories";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+          <Routes>
+              <Route exact path="/stages" element={<Stages/>}/>
+              <Route exact path="/manufacture" element={<Manufactures/>}/>
+              <Route exact path="/testfield" element={<TestFields/>}/>
+              <Route exact path="/department" element={<Departments/>}/>
+              <Route exact path="/empl-category" element={<EmployeeCategories/>}/>
+          </Routes>
+      </Router>
     </div>
   );
 }
