@@ -32,6 +32,9 @@ const Header = () => {
             <Link to="/test-equipment">
                 <p>Оборудование</p>
             </Link>
+            <Link to="/product-category">
+                <p>Категории продуктов</p>
+            </Link>
 
         </header>
     );

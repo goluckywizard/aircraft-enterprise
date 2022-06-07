@@ -11,6 +11,8 @@ import Brigades from "./pages/Brigades";
 import Worker from "./components/Worker";
 import Workers from "./pages/Workers";
 import TestEquipments from "./pages/TestEquipments";
+import EmployeeAttributes from "./pages/EmployeeAttributes";
+import ProductCategories from "./pages/ProductCategories";
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
               <Route exact path="/brigade" element={<Brigades/>}/>
               <Route exact path="/worker" element={<Workers/>}/>
               <Route exact path="/test-equipment" element={<TestEquipments/>}/>
+              <Route exact path="/empl-attribute" element={<EmployeeAttributes/>}/>
+              <Route exact path="/product-category" element={<ProductCategories/>}/>
           </Routes>
       </Router>
     </div>
