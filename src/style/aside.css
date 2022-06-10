@@ -1,0 +1,30 @@
+.headerContainer {
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    background-color: #9bcaff;
+    padding-right: 10px;
+    padding-left: 10px;
+    justify-content: space-between;
+    height: 700px;
+}
+/*.cont{*/
+/*    width: inherit;*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    justify-content: space-between;*/
+/*}*/
+.headerElement {
+    padding: 5px;
+    font-family: "Underdog";
+    color: #000000;
+
+}
+.link{
+    align-self: start;
+    text-decoration:none;
+}
+
+.headerElement:active{
+    font-weight: bold;
+}
