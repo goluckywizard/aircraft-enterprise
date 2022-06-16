@@ -44,6 +44,21 @@ const ProductAttributes = () => {
         setAttributes(data)
         console.log(data)
     }
+    async function getAllAttributes() {
+        let token = localStorage.getItem('token')
+        const response = await fetch('http://localhost:8080/product-attribute/', {
+            headers: {
+                Authorization: token,
+                'Content-Type': 'application/json',
+            }
+        })
+        if (response.status === 401) {
+            RemoveAuth()
+        }
+        let data = await response.json()
+        setAttributes(data)
+        console.log(data)
+    }
     async function addAttribute(event) {
         let token = localStorage.getItem('token')
         const response = await fetch('http://localhost:8080/product-attribute', {
@@ -61,6 +76,7 @@ const ProductAttributes = () => {
     }
     useEffect(() => {
         getCategories()
+        getAllAttributes()
         console.log(categories)
         console.log(attributes)
     }, [])
@@ -79,7 +95,7 @@ const ProductAttributes = () => {
                                 setCategoryId(e.target.value)
                                 /*console.log(e.target)
                                 console.log(e.target.value)*/
-                                getAttributes(e.target.value)
+                                //getAttributes(e.target.value)
                             }}>
                                 {categories?.map((category) => {
                                     return <option value={category.id}>{category.name}</option>

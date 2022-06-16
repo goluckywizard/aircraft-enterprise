@@ -21,9 +21,13 @@ const Work = (props) => {
     return (
         <div className="container">
             <p>{props.props.id}</p>
+            <p>{props.props.name}</p>
             <p>{props.props.department.name}</p>
             <p>{props.props.stage.name}</p>
             <p>{props.props.brigade.name}</p>
+            <div className="column-list">
+                {props.props.products?.map((a) => <p>ID: {a.id} Тип:{a.type.name}</p>)}
+            </div>
             <button className="btn2" onClick={deleteWork}>Удалить</button>
         </div>
     );

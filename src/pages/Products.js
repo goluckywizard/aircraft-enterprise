@@ -15,11 +15,11 @@ const Products = () => {
     const [categories, setCategories] = useState([])
     const [products, setProducts] = useState([])
     function incrementPage() {
-        getProducts(typeId, page+1)
+        getAllProducts(page+1)
         setPage(page+1)
     }
     function decrementPage() {
-        getProducts(typeId, page-1)
+        getAllProducts(page-1)
         setPage(page-1)
     }
 
@@ -68,6 +68,21 @@ const Products = () => {
         setProducts(data)
         console.log(data)
     }
+    async function getAllProducts(page) {
+        let token = localStorage.getItem('token')
+        const response = await fetch('http://localhost:8080/product/all/'+page+'/'+count, {
+            headers: {
+                Authorization: token,
+                'Content-Type': 'application/json',
+            }
+        })
+        if (response.status === 401) {
+            RemoveAuth()
+        }
+        let data = await response.json()
+        setProducts(data)
+        console.log(data)
+    }
     async function addProduct(event) {
         let token = localStorage.getItem('token')
         event.preventDefault()
@@ -102,6 +117,7 @@ const Products = () => {
     }
     useEffect(() => {
         getCategories()
+        getAllProducts(page)
         console.log(categories)
         console.log(types)
     }, [])
@@ -125,8 +141,8 @@ const Products = () => {
                             </select>
                             <select defaultValue={'DEFAULT'}  onChange={(e) => {
                                 setTypeId(e.target.value)
-                                setPage(0)
-                                getProducts(e.target.value, 0)
+                                //setPage(0)
+                                //getProducts(e.target.value, 0)
                             }}>
                                 <option value="DEFAULT" disabled>Choose a type</option>
                                 {types?.map((type) => <option value={type.id}>{type.name}</option>)}

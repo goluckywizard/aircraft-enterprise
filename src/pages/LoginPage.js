@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import '../style/style.css';
+import '../style/login.css';
 import history from '../components/history'
 import {Link, useNavigate} from "react-router-dom";
 import Header from "../components/Header";
@@ -37,9 +37,7 @@ const LoginPage = () => {
     }
 
     return (
-        <div className="App">
-            <Header/>
-            <Aside/>
+        <div>
         <main className="main-content">
             <form className="main-form" onSubmit={(e) => authorize(e)}>
                 <h1>Please, login or create yor account</h1>
@@ -50,7 +48,9 @@ const LoginPage = () => {
                 <Link to="/registration">
                     <p className="btn-sign">Sign in</p>
                 </Link>
-                <line className="line"></line>
+                <Link to="/change-password">
+                    <p className="btn-sign">Recover password</p>
+                </Link>
             </form>
         </main>
         </div>

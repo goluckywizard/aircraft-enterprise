@@ -21,6 +21,8 @@ import LoginPage from "./pages/LoginPage";
 import Products from "./pages/Products";
 import Works from "./pages/Works";
 import history from './components/history'
+import ProductToWorkPage from "./pages/ProductToWorkPage";
+import ResetPassword from "./pages/ResetPassword";
 
 function App() {
 
@@ -46,6 +48,8 @@ function App() {
               <Route exact path="/login" element={<LoginPage/>}/>
               <Route exact path="/product" element={<Products/>}/>
               <Route exact path="/work" element={<Works/>}/>
+              <Route exact path="/product-to-work" element={<ProductToWorkPage/>}/>
+              <Route exact path="/change-password" element={<ResetPassword/>}/>
           </Routes>
       </Router>
     </div>

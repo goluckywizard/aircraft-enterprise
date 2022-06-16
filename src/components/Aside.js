@@ -53,7 +53,9 @@ const Aside = () => {
                 <Link className="link" to="/work">
                     <p className="headerElement">Работы</p>
                 </Link>
-            {/*</div>*/}
+                <Link className="link" to="/product-to-work">
+                    <p className="headerElement">Начать работу над продуктом</p>
+                </Link>
         </aside>
     );
 };

@@ -84,6 +84,8 @@
 
 p{
     font-family: "Underdog";
+    color:black;
+    font-weight: bolder;
 }
 .content {
     font-family: "Underdog";
@@ -149,4 +151,14 @@ p{
     font-family: "Underdog";
     align-self: center;
     background-color: #ffffff;
+}
+
+.radio-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.column-list {
+    display: flex;
+    flex-direction: column;
 }

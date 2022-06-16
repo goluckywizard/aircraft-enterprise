@@ -46,6 +46,7 @@ const EmplAttribute = (props) => {
     return (
         <div>
             <div className="container">
+                <p>{props.props.category_name}</p>
                 <p>{props.props.attribute}</p>
                 <p>{props.props.value}</p>
                 <button className="btn2" onClick={handleClick}>Изменить</button>
